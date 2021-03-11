@@ -7,19 +7,21 @@ public class Field {
 
 
     // Constructors
-    public Field(String token){
+    public Field(String token) {
         this.token = token;
         isOccupied = false;
     }
 
     // methoden
-    public void setToken(String token){
-        if(isOccupied = false) {
+    public void setToken(String token) {
+        if (isOccupied == false) {
             this.token = token;
         }
         isOccupied = true;
     }
-    public String getToken(){
+
+    public String getToken() {
         return token;
     }
+
 }

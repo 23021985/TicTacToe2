@@ -34,8 +34,9 @@ public class Main {
             int selectedField = UserInput.nextInt();
 
             String currentPlayerToken = game.getCurrentPlayer().getToken();
-
+            //print het bord
             board[selectedField].setToken(currentPlayerToken);
+            printboard(board);
 
             hasWon = game.hasPlayerWon(board);
 
@@ -43,8 +44,7 @@ public class Main {
                 game.getCurrentPlayer().setScore(1);
             }
 
-            //print het bord
-            printboard(board);
+
 
             //wissel van speler
             game.switchPlayer();
@@ -78,41 +78,6 @@ public class Main {
             return playerA;
         }
     }
-
-    //voeg een winconditie toe
-    public static boolean hasPlayerWon(String[] board, String currentPlayer){
-
-        // horizontale opties om te winnen
-        if (board[0].equals(currentPlayer)  && board[1].equals(currentPlayer) && board[2].equals(currentPlayer)){
-            return true;
-        }
-        if (board[3].equals(currentPlayer)  && board[4].equals(currentPlayer) && board[5].equals(currentPlayer)){
-            return true;
-        }
-        if (board[6].equals(currentPlayer)  && board[7].equals(currentPlayer) && board[8].equals(currentPlayer)){
-            return true;
-        }
-        //verticale opties om te winnen
-
-        if (board[0].equals(currentPlayer)  && board[3].equals(currentPlayer) && board[6].equals(currentPlayer)){
-            return true;
-        }
-        if (board[1].equals(currentPlayer)  && board[4].equals(currentPlayer) && board[7].equals(currentPlayer)){
-            return true;
-        }
-        if (board[2].equals(currentPlayer)  && board[5].equals(currentPlayer) && board[8].equals(currentPlayer)){
-            return true;
-        }
-
-        //diagonale opties om te winnen
-        if (board[0].equals(currentPlayer)  && board[4].equals(currentPlayer) && board[8].equals(currentPlayer)){
-            return true;
-        }
-        if (board[2].equals(currentPlayer)  && board[4].equals(currentPlayer) && board[6].equals(currentPlayer)){
-            return true;
-        }
-        return false;
-        }
 
         //voeg een menu toe
     }

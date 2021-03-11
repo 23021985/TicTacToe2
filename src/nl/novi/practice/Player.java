@@ -26,10 +26,5 @@ public class Player {
     public void setScore(int extraPoints){
         score = score + extraPoints;
     }
-    public void addScore(){
-        score++;
-    }
-    public void getScore(int score) {
-        this.score += score;
-    }
+
 }
